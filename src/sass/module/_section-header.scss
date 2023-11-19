@@ -2,7 +2,6 @@
 
 .section-header__maintitle {
     font-weight: $regular;
-    font-family: $base-font-family;
     color: $blue;
     font-size: rem(32);
     line-height: 1;
@@ -13,18 +12,37 @@
 }
 
 .section-header__maintitle span {
-    color: $green;
+    color: $black;
 }
 
 .section-header__subtitle {
     font-weight: $regular;
-    font-family: $base-font-family;
-    color: $green;
+    color: $black;
     font-size: rem(12);
     line-height: 1;
     text-align: center;
+    padding-top: rem(10);
+    @include mq("md") {
+        margin-top: rem(4);
+    }
 }
 
-.section-header__maintitle.section-header__maintitle--big {
+.section-header__maintitle.section-header__maintitle--contact {
     font-size: rem(80);
+}
+
+.section-header__maintitle.section-header__maintitle--blog {
+    @include mq("md") {
+        color: $base;
+    }
+}
+
+.section-header__maintitle.section-header__maintitle--blog span{
+    @include mq("md") {
+        color: $lightblue;
+    }
+}
+
+.top {
+    margin-top: rem(50);
 }
