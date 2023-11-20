@@ -44,6 +44,10 @@
     overscroll-behavior: none;
 }
 
+.sp-nav__logo {
+    content: url(./assets/images/common/sp-nav.jpg);
+}
+
 .sp-nav__item a {
     display: block;
     width: 100%;
