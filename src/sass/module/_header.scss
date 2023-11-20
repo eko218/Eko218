@@ -31,7 +31,7 @@
 
 .header__logo {
   position: relative;
-  color: $base;
+  background-color: $black;
   width: rem(102);
   z-index: 99999;
     @include mq("md") {

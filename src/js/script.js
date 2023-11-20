@@ -34,3 +34,13 @@ $(function(){
     });
   }());
 
+// mvスライダー
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    effect: 'fade', // フェードのエフェクト
+      autoplay: {
+        delay: 3000, // ４秒後に次の画像へ
+        disableOnInteraction: false, // ユーザー操作後に自動再生を再開する
+      },
+      speed: 2000, // ２秒かけながら次の画像へ移動
+});

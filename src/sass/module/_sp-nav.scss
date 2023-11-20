@@ -44,8 +44,10 @@
     overscroll-behavior: none;
 }
 
-.sp-nav__logo {
-    content: url(./assets/images/common/sp-nav.jpg);
+.sp-nav__logo::before {
+    content: url(../../assets/images/common/hitode.png);
+    width: rem(18);
+    height: rem(18);
 }
 
 .sp-nav__item a {
