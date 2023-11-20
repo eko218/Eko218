@@ -1,2 +1,61 @@
 @use "global" as *;
 
+.pc-nav  {
+    height: inherit;
+    display: none;
+      @include mq("md") {
+         display: block;
+      }
+}
+
+.pc-nav__item {
+    height: inherit;
+}
+
+.pc-nav__item span {
+    flex-direction: column;
+}
+
+.pc-nav__items {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pc-nav__item a {
+    height: inherit;
+    color: $base;
+    font-weight: $regular;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 rem(20);
+    font-size: rem(18);
+    position: relative;
+    flex-direction: column;
+}
+
+.pc-nav__item:last-child a {
+    padding-right: rem(0);
+}
+
+.pc-nav__item a span {
+    font-size: rem(10);
+    line-height: calc(15 / 10);
+}
+
+ .pc-nav__item:not(:last-child) a:after {
+    content: "";
+    position: absolute;
+    text-align: center;
+    left: 12%;
+    bottom: rem(7);
+    display: inline;
+    width: 0%;
+    height: rem(2);
+    // background: $yellow;
+    z-index: -1;
+    transition: all 0.3s;
+  }

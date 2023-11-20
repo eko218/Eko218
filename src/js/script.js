@@ -27,3 +27,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 });
 
+// ドロワーメニューふわっとフェードイン
+$(function(){
+    $('.sp-nav').on('click', function(){
+      $('.sp-nav__left, .sp-nav__right').toggleClass('is-active');
+    });
+  }());
+

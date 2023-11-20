@@ -11,12 +11,26 @@
     z-index: 9999;
     transform: translateX(100%);
     transition: ease .3s;
+    margin-top: rem(80);
       @include mq("md") {
          display: none;
       }
 }
 
-.sp-nav.is-open {
+.sp-nav__body {
+    display: flex;
+    gap: rem(7);
+}
+
+.sp-nav__left {
+    padding-top: rem(24);
+}
+
+.sp-nav__right {
+    padding-top: rem(24);
+}
+
+.sp-nav.is-active {
     transform: translateX(0);
 }
 
@@ -36,12 +50,23 @@
     padding-top: rem(15);
     padding-bottom: rem(15);
     text-align: center;
-    color: $white;
+    color: $base;
     font-weight: $regular;
     font-size: rem(16);
     letter-spacing: rem(2);
 }
 
+/* アニメーション前のメニューの状態 */
+.sp-nav{
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
+  /* アニメーション後のメニューの状態 */
+  .sp-nav.is-active{
+    pointer-events: auto;
+    opacity: 1;
+  }
 
  .sp-nav__scroll-container {
      /* メニュー内コンテナの高さを100vhに設定 */
