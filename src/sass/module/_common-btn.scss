@@ -11,7 +11,9 @@
     background: $black;
     line-height: 1;
     padding: rem(17) rem(86) rem(17) rem(40);
-    border: 1px solid $black;
+    box-shadow: rem(4) rem(4) $black;
+    outline: rem(4) solid $base;
+    border: rem(1) solid $black;
 }
 
 .common-btn::before{
@@ -43,11 +45,3 @@
     // transition: all .3s;
 }
 
-.common-btn span {
-    border: 1px solid $black;
-    display: block;
-    padding: rem(17) rem(86) rem(17) rem(40);
-    position: absolute;
-    top: rem(4);
-    bottom: rem(4);
-}
