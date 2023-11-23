@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.voice__items  {
+    @include mq("md") {
+        display: flex;
+    }
+}

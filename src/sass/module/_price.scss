@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.price {
+    background-color: $lightblue;
+}
+
+.price__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    @include mq("md") {
+        padding-top: rem(100);
+        padding-bottom: rem(100);
+    }
+}
+
+.price__body {
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.price__img {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.price__item {
+    margin-top: rem(40);
+}
+
+.price__btn {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
