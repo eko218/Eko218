@@ -45,3 +45,10 @@ $(function(){
         speed: 2000, // ２秒かけながら次の画像へ移動
  });
 
+//  campaignスライダー
+var swiper = new Swiper(".js-campaign-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+});
+
