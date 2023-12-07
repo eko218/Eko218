@@ -1,13 +1,11 @@
 @use "global" as *;
 
-// .campaign__items {
-//     margin-top: rem(24);
-//     margin-left: rem(15);
-//     display: flex;
-//     @include mq("md") {
-//         margin-top: rem(40);
-//     }
-// }
+.campaign__slider {
+    margin-top: rem(24);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
 
 .campaign__btn {
     text-align: center;

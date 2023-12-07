@@ -52,3 +52,23 @@ var swiper = new Swiper(".js-campaign-swiper", {
   freeMode: true,
 });
 
+// フッター手前で止まるボタン
+$(function () {
+  const pageTop = $(".js-page-top");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 20) {
+      pageTop.fadeIn();
+    } else {
+      pageTop.fadeOut();
+    }
+  });
+  pageTop.click(function () {
+    $("body, html").animate(
+      {
+        scrollTop: 0,
+      },
+      300
+    );
+    return false;
+  });
+});

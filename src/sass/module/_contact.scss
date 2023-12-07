@@ -1,6 +1,22 @@
 @use "global" as *;
 
+.contact {
+    // position: relative;
+}
+
+.contact__inner {
+    @include mq("md") {
+        max-width: rem(1130);
+        width: 100%;
+        margin: auto;
+    }
+}
+
 .contact__container {
+   margin-left: auto;
+   margin-right: auto;
+//    position: absolute;
+    background-image: url(/src/assets/images/common/contact-fish.png);
     @include mq("md") {
         display: flex;
         padding-top: rem(80);

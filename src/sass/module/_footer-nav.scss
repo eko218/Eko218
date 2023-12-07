@@ -1,35 +1,46 @@
 @use "global" as *;
 
-.sp-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: $black;
-    width: 100%;
-    height: 100vh;
-    z-index: 9999;
-    transform: translateX(100%);
-    transition: ease .3s;
-    padding-top: rem(70);
-    padding-left: rem(15);
-    padding-right: rem(15);
-    padding-bottom: rem(111);
-      @include mq("md") {
-         display: none;
-      }
+.footer-nav__body {
+    display: flex;
+
+    // grid-template-columns: repeat(2,1fr);
+    // grid-template-rows: repeat(2,1fr);
+    @include mq("md") {
+        // width: rem(1440);
+        gap: rem(120);
+        // grid-template-columns: repeat(4,1fr);
+    }
 }
 
-.sp-nav__body {
-    display: grid;
-    width: rem(345);
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+.footer-nav__left {
+    @include mq("md") {
+        display: flex;
+        gap: rem(120);
+    }
 }
 
+.footer-nav__right {
+    margin-left: rem(13);
+    @include mq("md") {
+        display: flex;
+        gap: rem(120);
+    }
+}
 
+.footer-nav__item-indent {
+    @include mq("md") {
+        display: none;
+    }
+}
 
-.sp-nav.is-active {
+.footer-nav__item a {
+    @include mq("md") {
+        white-space: nowrap;
+    }
+
+}
+
+.footer-nav.is-active {
     transform: translateX(0);
 }
 
@@ -41,26 +52,35 @@
 //     padding-top: rem(104);
 // }
 
-.sp-nav__item:first-child a {
+.footer-nav__item:first-child a {
     font-weight: $bold;
-    padding-top: rem(30);
+    padding-top: rem(36);
+    @include mq("md") {
+        padding-top: rem(0);
+    }
 }
 
-.sp-nav__item:not(:first-child) a {
+.footer-nav__item:not(:first-child) a {
     padding-left: rem(21);
-    padding-top: rem(20);
+    padding-top: rem(17);
 }
 
-.sp-nav__item-indent {
+.footer-nav__item:nth-child(even) a {
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.footer-nav__item-indent {
     margin-left: rem(-5);
 }
 
-.sp-nav__item img {
+.footer-nav__item img {
     width: rem(18);
     height: rem(18);
 }
 
-.sp-nav__item-logo {
+.footer-nav__item-logo {
     content: url(../../assets/images/common/hitode.png);
     width: rem(18);
     height: rem(18);
@@ -83,7 +103,7 @@
 //     height: rem(18);
 // }
 
-.sp-nav__item a {
+.footer-nav__item a {
     display: block;
     width: 100%;
     // padding-top: rem(15);
@@ -92,6 +112,19 @@
     color: $base;
     font-weight: $regular;
     font-size: rem(16);
+}
+
+.footer-nav__copyright {
+    font-size: rem(14);
+    line-height: calc(18 / 12);
+    font-weight: $regular;
+    margin-top: rem(40);
+    text-align: center;
+    @include mq("md") {
+        font-size: rem(14);
+        line-height: calc(18 / 14);
+        margin-top: rem(80);
+    }
 }
 
 /* アニメーション前のメニューの状態 */
