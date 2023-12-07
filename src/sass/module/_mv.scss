@@ -5,7 +5,12 @@
     height: 100vh;
   }
 
-  .mv__slide-img img{
+.mv__inner {
+    width: 100%;
+    height: inherit;
+}
+
+.mv__slide-img img{
     display: block;
     height: 100vh;
     width: 100%;

@@ -1,7 +1,23 @@
 @use "global" as *;
 
+.campaign {
+    overflow: hidden;
+}
+
+.campaign__inner {
+    @include mq("md") {
+        max-width: rem(1285);
+        width: 100%;
+        margin: auto;
+    }
+}
+
 .campaign__slider {
     margin-top: rem(24);
+    margin-left: rem(15);
+    margin-right: rem(24);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
     @include mq("md") {
         margin-top: rem(40);
     }

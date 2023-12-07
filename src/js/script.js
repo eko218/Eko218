@@ -46,10 +46,42 @@ $(function(){
  });
 
 //  campaignスライダー
-var swiper = new Swiper(".js-campaign-swiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  freeMode: true,
+// var swiper = new Swiper(".js-campaign-swiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 30,
+//   freeMode: true,
+// });
+
+const campaignSwiper = new Swiper(".js-campaign-swiper", {
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: "1",
+  speed: 2000,
+  loopAdditionalSlides: 2,
+  width: 280,
+
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  breakpoints: { //ブレークポイントの設定 小さい順に設定する！！
+    768: {
+      slidesPerView: "3.5",
+      spaceBetween: 40,
+      width: 1265.5,
+
+    },
+    1920: {
+      slidesPerView: "5",
+      spaceBetween: 40,
+      width: 1825,
+    },
+  },
+  // 前後の矢印
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 // フッター手前で止まるボタン
