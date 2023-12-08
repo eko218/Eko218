@@ -52,37 +52,66 @@ $(function(){
 //   freeMode: true,
 // });
 
-const campaignSwiper = new Swiper(".js-campaign-swiper", {
-  loop: true,
-  spaceBetween: 24,
-  slidesPerView: "1",
-  speed: 2000,
-  loopAdditionalSlides: 2,
-  width: 280,
+// const campaignSwiper = new Swiper(".js-campaign-swiper", {
+//   loop: true,
+//   spaceBetween: 24,
+//   slidesPerView: 1,
+//   speed: 2000,
+//   // loopAdditionalSlides: 2,
+//   // width: 280,
 
+//   autoplay: {
+//     delay: 1500,
+//     disableOnInteraction: false,
+//   },
+//   breakpoints: { //ブレークポイントの設定 小さい順に設定する！！
+//     768: {
+//       slidesPerView: 3.5,
+//       spaceBetween: 40,
+//       // width: 1265.5,
+
+//     },
+//     // 1920: {
+//     //   slidesPerView: "5",
+//     //   spaceBetween: 40,
+//     //   // width: 1825,
+//     // },
+//   },
+//   // 前後の矢印
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
+const service_swiper = new Swiper('.js-top-campaign-swiper', {
+  loop: true,
+  speed: 3000,
+  slidesPerView: 1.31,
+  // slidesPerView: 'auto',
+  spaceBetween: 24,
+  // paginationClickable: true,
   autoplay: {
-    delay: 0,
+    delay: 1500,
     disableOnInteraction: false,
   },
-  breakpoints: { //ブレークポイントの設定 小さい順に設定する！！
+  breakpoints: {
     768: {
-      slidesPerView: "3.5",
-      spaceBetween: 40,
-      width: 1265.5,
+      // slidesPerView: 4.5,
+      slidesPerView: 'auto',
+      // loopAdditionalSlides: 4,
 
-    },
-    1920: {
-      slidesPerView: "5",
       spaceBetween: 40,
-      width: 1825,
     },
   },
-  // 前後の矢印
+
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.top-campaign__button-next',
+    prevEl: '.top-campaign__button-prev',
+    clickable: true,
   },
 });
+
 
 // フッター手前で止まるボタン
 $(function () {
