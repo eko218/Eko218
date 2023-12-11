@@ -31,6 +31,10 @@
     font-size: rem(80);
 }
 
+.section-header__subtitle.section-header__subtitle--contact {
+    padding-top: 0;
+}
+
 .section-header__maintitle.section-header__maintitle--blog {
     @include mq("md") {
         color: $base;

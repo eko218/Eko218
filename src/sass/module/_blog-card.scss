@@ -1,13 +1,15 @@
 @use "global" as *;
 
 .blog-card {
+    margin-top: rem(40);
     padding-top: rem(16);
     padding-right: rem(16);
     padding-bottom: rem(24);
     padding-left: rem(16);
     color: $blue;
-    box-shadow: 0 rem(4) rem(4) rgba(0,0,0,0.25);
+    box-shadow: 0 rem(4) rem(4) 0 rgba(0,0,0,0.25);
     position: relative;
+    width: 100%;
 }
 
 .blog-card__img {
@@ -20,6 +22,7 @@
 .blog-card__info {
     max-width: rem(301);
     margin: auto;
+    margin-top: rem(20);
 }
 
 .blog-card__date {
@@ -32,6 +35,7 @@
     line-height: calc(24 / 16);
     font-weight: $medium;
     border-bottom: rem(1) solid $black;
+    padding-bottom: rem(2);
 }
 
 .blog-card__body {

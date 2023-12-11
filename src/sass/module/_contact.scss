@@ -1,8 +1,8 @@
 @use "global" as *;
 
-// .contact {
-//     // position: relative;
-// }
+.contact {
+    position: relative;
+ }
 
 .contact__inner {
     @include mq("md") {
@@ -21,9 +21,13 @@
     background-position: center;
     width: rem(109);
     height: rem(50);
+    top: -4%;
+    right: 4%;
     @include mq("md") {
         width: rem(301);
         height: rem(138);
+        top: -10%;
+        left: 76%;
     }
 }
 
@@ -33,13 +37,13 @@
     @include mq("md") {
         display: flex;
         padding-top: rem(80);
-        padding-bottom: rem(80);
+        padding-bottom: rem(70);
         box-shadow: rem(4) rem(4) rem(10) rgba(0,0,0,0.25);
     }
 }
 
 .contact__access {
-    width: 78.6666%;
+    width: 84.6666%;
     margin: auto;
     @include mq("md") {
         padding-right: rem(82);
