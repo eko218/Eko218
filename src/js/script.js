@@ -84,34 +84,83 @@ $(function(){
 //   },
 // });
 
-const service_swiper = new Swiper('.js-top-campaign-swiper', {
-  loop: true,
-  speed: 3000,
-  slidesPerView: 1.31,
-  // slidesPerView: 'auto',
-  spaceBetween: 24,
-  // paginationClickable: true,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    768: {
-      // slidesPerView: 4.5,
-      slidesPerView: 'auto',
-      // loopAdditionalSlides: 4,
+// const service_swiper = new Swiper('.js-top-campaign-swiper', {
+//   loop: true,
+//   speed: 3000,
+//   slidesPerView: 1.31,
+//   // slidesPerView: 'auto',
+//   spaceBetween: 24,
+//   // paginationClickable: true,
+//   autoplay: {
+//     delay: 1500,
+//     disableOnInteraction: false,
+//   },
+//   breakpoints: {
+//     768: {
+//       // slidesPerView: 4.5,
+//       slidesPerView: 'auto',
+//       // loopAdditionalSlides: 4,
 
-      spaceBetween: 40,
+//       spaceBetween: 40,
+//     },
+//   },
+
+//   navigation: {
+//     nextEl: '.top-campaign__button-next',
+//     prevEl: '.top-campaign__button-prev',
+//     clickable: true,
+//   },
+// });
+// Top-Campaign スライダー
+jQuery(function ($) {
+  // リサイズ処理（PC時のみ矢印表示）
+  const service_slideLength = document.querySelectorAll(
+    '.js-top-campaign-swiper .swiper-slide'
+  ).length;
+  $(window).resize(function () {
+    service_arrow();
+  });
+  service_arrow();
+  function service_arrow() {
+    if (
+      window.matchMedia('(max-width: 767px)').matches ||
+      service_slideLength <= 2
+    ) {
+      $('.js-top-campaign-arrow').hide();
+    } else {
+      $('.js-top-campaign-arrow').show();
+    }
+  }
+
+  // Swiper
+  const service_swiper = new Swiper('.js-top-campaign-swiper', {
+    loop: true,
+    speed: 3000,
+    slidesPerView: 1.31,
+    // slidesPerView: 'auto',
+    spaceBetween: 24,
+    // paginationClickable: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
     },
-  },
+    breakpoints: {
+      768: {
+        // slidesPerView: 4.5,
+        slidesPerView: 'auto',
+        // loopAdditionalSlides: 4,
 
-  navigation: {
-    nextEl: '.top-campaign__button-next',
-    prevEl: '.top-campaign__button-prev',
-    clickable: true,
-  },
+        spaceBetween: 40,
+      },
+    },
+
+    navigation: {
+      nextEl: '.top-campaign__button-next',
+      prevEl: '.top-campaign__button-prev',
+      clickable: true,
+    },
+  });
 });
-
 
 // フッター手前で止まるボタン
 $(function () {
